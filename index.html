@@ -1,150 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#10110f" />
-  <meta name="description" content="Portfolio of Atharva Raju Kale — Sales & Marketing, Event Management and Automobile Engineering." />
-  <title>Atharva Raju Kale — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#10110f;--panel:#171916;--panel2:#1d201b;--text:#f3f2ec;--muted:#a4a79c;--line:#30342c;--accent:#c8f169;--accent2:#d9ff87;--max:1120px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
-    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-    .brand{font-weight:800;letter-spacing:-.06em;font-size:20px}.brand span{color:var(--accent)}
-    .navlinks{display:flex;gap:27px;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    .navlinks a:hover,.textlink:hover{color:var(--accent)}
-    .menu{display:none;background:none;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
-    .hero{padding:100px 0 92px;display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:center}
-    .eyebrow,.mono{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--accent)}
-    h1{font-size:clamp(48px,7.3vw,92px);line-height:.99;letter-spacing:-.085em;margin:22px 0 24px;font-weight:800}
-    h1 em{font-style:normal;color:var(--accent)}
-    .intro{font-size:17px;color:#c3c6bb;max-width:620px;line-height:1.8}
-    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:34px}
-    .btn{padding:13px 19px;border-radius:4px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px;transition:.2s}
-    .primary{background:var(--accent);color:#141610}.primary:hover{background:var(--accent2);transform:translateY(-2px)}
-    .secondary{border:1px solid #53584c;color:var(--text)}.secondary:hover{border-color:var(--accent);color:var(--accent)}
-    .hero-card{background:var(--panel);border:1px solid var(--line);padding:25px;position:relative;min-height:310px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
-    .hero-card:after{content:"";position:absolute;width:210px;height:210px;border:1px solid #4d5c35;border-radius:50%;right:-70px;top:-65px;box-shadow:0 0 0 25px #c8f16908,0 0 0 55px #c8f16905}
-    .initials{font-size:100px;line-height:1;font-weight:800;letter-spacing:-.1em;color:var(--accent);position:relative;z-index:1}
-    .card-foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:10px}
-    .section{padding:82px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
-    .section-index{font-family:"DM Mono",monospace;color:var(--accent);font-size:11px}
-    h2{font-size:clamp(32px,4.2vw,52px);line-height:1.05;letter-spacing:-.07em;margin:10px 0 0}
-    .section-note{color:var(--muted);max-width:360px;font-size:13px}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
-    .about-copy{font-size:18px;color:#d1d3ca;line-height:1.85}.about-copy strong{color:var(--accent);font-weight:700}
-    .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .stat{padding:20px;background:var(--panel);border:1px solid var(--line)}.stat b{display:block;font-size:25px;letter-spacing:-.06em}.stat span{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em}
-    .timeline{display:grid;gap:12px}.job{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:27px;background:var(--panel);border:1px solid var(--line)}
-    .date{font-family:"DM Mono",monospace;font-size:11px;color:var(--accent);padding-top:5px}
-    .job h3{font-size:20px;letter-spacing:-.04em;margin:0 0 5px}.company{font-size:13px;color:var(--muted);margin-bottom:13px}
-    .job p{margin:0;color:#c2c5bb;font-size:13px;max-width:720px}
-    .edu{display:grid;grid-template-columns:1fr 1fr;gap:14px}.edu-card{padding:26px;background:var(--panel);border:1px solid var(--line);min-height:185px}
-    .edu-card h3{font-size:21px;letter-spacing:-.05em;margin:20px 0 7px}.edu-card p{color:var(--muted);font-size:13px;margin:0}
-    .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
-    .skill{padding:22px;background:var(--panel);border:1px solid var(--line)}.skill h3{margin:0 0 14px;font-size:15px}.tags{display:flex;gap:8px;flex-wrap:wrap}
-    .tag{font-size:11px;color:#d2d5ca;border:1px solid #3a4034;padding:6px 9px;border-radius:3px}
-    .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .project{padding:26px;background:var(--panel);border:1px solid var(--line);min-height:220px;display:flex;flex-direction:column;justify-content:space-between}
-    .project .num{font-family:"DM Mono",monospace;color:var(--accent);font-size:11px}.project h3{font-size:22px;letter-spacing:-.05em;margin:18px 0 8px}.project p{font-size:13px;color:var(--muted);margin:0}
-    .project a{color:var(--accent);font-size:12px;font-weight:800;margin-top:20px;display:inline-block}
-    .contact{background:var(--accent);color:#151810;padding:60px;margin-top:10px}
-    .contact .eyebrow{color:#3e5120}.contact h2{max-width:650px}.contact-row{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:30px}
-    .contact p{font-size:14px;color:#3c4828}.contact a{font-weight:800;border-bottom:1px solid #697d3c;padding-bottom:3px}
-    footer{padding:27px 0;color:var(--muted);font-size:11px;display:flex;justify-content:space-between;gap:20px}
-    @media(max-width:760px){.wrap{width:min(100% - 32px,var(--max))}.navlinks{display:none;position:absolute;top:77px;left:0;right:0;background:var(--panel);padding:22px 24px;flex-direction:column;z-index:5;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.hero{padding:65px 0;grid-template-columns:1fr;gap:30px}.hero-card{min-height:230px}.initials{font-size:75px}.section{padding:60px 0}.section-head{display:block}.section-note{margin-top:15px}.about-grid,.edu,.project-grid{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:10px}.skill-grid{grid-template-columns:1fr}.contact{padding:32px 24px}.contact-row{display:block}.contact-row .btn{margin-top:15px}footer{flex-direction:column}}
-    @media print{.nav,.actions,.menu{display:none!important}body{background:white;color:#111}.hero,.section{padding:30px 0}.hero-card,.job,.edu-card,.skill,.project,.stat{background:white;border:1px solid #ddd;color:#111}.intro,.about-copy,.job p,.company,.edu-card p,.project p{color:#333}.contact{background:#eee;color:#111}.contact p{color:#333}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f4ef">
+<meta name="description" content="Atharva Raju Kale — Sales, Marketing, Event Management and Automobile Engineering.">
+<title>Atharva Raju Kale — Personal Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f6f4ef;--white:#fffefa;--ink:#17211e;--muted:#66716c;--line:#dcded6;--accent:#ef6848;--accent2:#d7e7d7;--shadow:0 18px 55px #17211e0d;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}.container{width:min(var(--max),calc(100% - 56px));margin:auto}
+.topbar{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;background:#f6f4efed;backdrop-filter:blur(16px)}
+.wordmark{font:700 17px "Space Grotesk";letter-spacing:-.06em}.wordmark span{color:var(--accent)}
+.navlinks{display:flex;align-items:center;gap:30px;font-size:12px;font-weight:700;color:#56615b}.navlinks a{transition:color .2s}.navlinks a:hover{color:var(--accent)}
+.navright{display:flex;gap:10px;align-items:center}.nav-cta{background:var(--ink);color:white;padding:11px 16px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.04em}.nav-cta:hover{background:var(--accent)}
+.menu,.theme{border:1px solid var(--line);background:transparent;padding:9px 11px;border-radius:3px;cursor:pointer;color:var(--ink)}.menu{display:none}
+.hero{padding:82px 0 74px;display:grid;grid-template-columns:1.18fr .82fr;gap:60px;align-items:center;min-height:620px}
+.kicker{display:flex;align-items:center;gap:10px;font:600 10px "Space Grotesk";letter-spacing:.16em;text-transform:uppercase;color:#65716a}.dot{height:7px;width:7px;border-radius:50%;background:#62a477;box-shadow:0 0 0 4px #62a47720}
+h1,h2,h3,p{margin-top:0}h1{font:600 clamp(56px,7vw,91px)/.99 "Space Grotesk";letter-spacing:-.085em;margin:24px 0 23px;max-width:720px}
+h1 .accent{color:var(--accent)}.hero-copy{font-size:17px;line-height:1.8;color:#56615b;max-width:590px}
+.hero-actions{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 19px;border-radius:3px;font-size:12px;font-weight:700;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-dark{background:var(--ink);color:white}.btn-dark:hover{background:var(--accent)}.btn-line{border:1px solid #bdc4bb;color:var(--ink)}.btn-line:hover{border-color:var(--ink)}
+.hero-visual{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center}
+.profile-art{width:min(100%,410px);aspect-ratio:4/4.55;background:#dce7dc;border-radius:48% 48% 4px 4px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.profile-art:before{content:"";position:absolute;width:330px;height:330px;border:1px solid #ffffffa8;border-radius:50%;top:38px;left:50%;transform:translateX(-50%);box-shadow:0 0 0 28px #ffffff23,0 0 0 58px #ffffff19}
+.profile-art:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:#f3b39c;bottom:-74px;right:-60px;opacity:.85}
+.monogram{position:relative;z-index:2;font:700 clamp(110px,17vw,190px)/1 "Space Grotesk";letter-spacing:-.13em;color:#24332b;margin-left:-18px}
+.art-label{position:absolute;z-index:3;bottom:22px;left:22px;background:var(--white);padding:12px 15px;box-shadow:var(--shadow);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.sticker{position:absolute;z-index:4;right:-10px;top:40px;background:var(--accent);color:white;padding:14px 17px;font:600 11px "Space Grotesk";transform:rotate(5deg);box-shadow:var(--shadow)}
+.hero-meta{position:absolute;right:0;bottom:0;font:10px "Space Grotesk";letter-spacing:.1em;color:#738078;writing-mode:vertical-rl}
+.trustline{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:19px 0;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:#707a73;font:600 10px "Space Grotesk";letter-spacing:.12em;text-transform:uppercase}
+.section{padding:100px 0;border-bottom:1px solid var(--line)}.section-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:43px}
+.index{font:600 10px "Space Grotesk";letter-spacing:.16em;color:var(--accent);text-transform:uppercase}.section h2{font:600 clamp(37px,5vw,60px)/1.02 "Space Grotesk";letter-spacing:-.075em;margin:13px 0 0}.section-intro{max-width:370px;color:var(--muted);font-size:14px;line-height:1.8;margin:0}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:75px;align-items:start}.about-text{font-size:19px;line-height:1.9;color:#46534c}.about-text strong{color:var(--ink);font-weight:700}.about-text .highlight{color:var(--accent)}
+.info-card{background:var(--white);border:1px solid var(--line);padding:28px;box-shadow:var(--shadow)}.info-row{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line);font-size:12px}.info-row:last-child{border:0}.info-row span:first-child{color:var(--muted)}.info-row strong{text-align:right}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.work-card{background:var(--white);border:1px solid var(--line);overflow:hidden;transition:transform .25s,box-shadow .25s}.work-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.work-art{height:260px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.art-event{background:#e9d9ce}.event-poster{width:185px;height:220px;background:#fffaf0;box-shadow:0 18px 40px #5a403326;transform:rotate(-4deg);padding:20px 15px;text-align:center;color:#7c3f2f;display:flex;flex-direction:column;justify-content:center}.event-poster small{font:600 8px "Space Grotesk";letter-spacing:.2em}.event-poster b{font:700 26px/1.05 "Space Grotesk";margin:15px 0}.event-poster span{font-size:9px;letter-spacing:.08em}.poster-flower{position:absolute;border:1px solid #bc8b72;width:58px;height:58px;border-radius:50%;top:22px;right:24px;box-shadow:0 0 0 8px #bc8b7220,0 0 0 16px #bc8b7214}
+.art-sales{background:#dce6dc}.sales-board{width:75%;background:#24352d;color:#f7f5ee;padding:25px;transform:rotate(3deg);box-shadow:0 20px 45px #26372c30}.sales-board small{color:#d2e2c8;font:600 9px "Space Grotesk";letter-spacing:.18em}.sales-board strong{display:block;font:600 36px/1 "Space Grotesk";letter-spacing:-.07em;margin:20px 0}.sales-board div{height:5px;background:#e77b59;width:65%;margin-top:20px}
+.art-auto{background:#e6e2d9}.auto-board{width:76%;height:160px;border:1px solid #9a9b90;background:#f7f5ef;position:relative;padding:22px;box-shadow:0 20px 45px #2222}.auto-board:before{content:"";position:absolute;left:22px;right:22px;top:55px;height:1px;background:#c6c5ba}.auto-board:after{content:"";position:absolute;left:22px;right:22px;bottom:38px;height:1px;background:#c6c5ba}.gauge{width:78px;height:78px;border:7px solid #31433a;border-bottom-color:transparent;border-radius:50%;position:absolute;right:30px;top:35px}.gauge:after{content:"";position:absolute;width:30px;height:3px;background:var(--accent);top:32px;left:28px;transform:rotate(-36deg);transform-origin:left}
+.art-eventfox{background:#f2d8ce}.event-layout{width:75%;display:grid;grid-template-columns:1fr 1fr;gap:7px;transform:rotate(-3deg)}.event-layout span{height:80px;background:#e66b4d}.event-layout span:nth-child(2){background:#263c34;height:120px}.event-layout span:nth-child(3){background:#f5eee3;height:100px}.event-layout span:nth-child(4){background:#c8d7c8;height:65px}
+.work-body{padding:25px 26px 28px}.work-meta{font:600 9px "Space Grotesk";letter-spacing:.15em;text-transform:uppercase;color:#8a948d}.work-body h3{font:600 23px "Space Grotesk";letter-spacing:-.05em;margin:12px 0 8px}.work-body p{font-size:13px;color:var(--muted);line-height:1.75;margin:0;max-width:490px}.work-link{display:inline-block;margin-top:18px;font-size:11px;font-weight:700;color:var(--accent)}
+.exp-list{border-top:1px solid var(--line)}.exp-item{display:grid;grid-template-columns:180px 1fr 180px;gap:25px;padding:28px 0;border-bottom:1px solid var(--line);align-items:start}.exp-date{font:600 10px "Space Grotesk";letter-spacing:.1em;color:#7b877f;padding-top:5px}.exp-item h3{font:600 20px "Space Grotesk";letter-spacing:-.04em;margin:0 0 6px}.exp-company{font-size:12px;color:var(--accent);font-weight:700;margin-bottom:12px}.exp-item p{font-size:13px;line-height:1.8;color:var(--muted);margin:0;max-width:630px}.exp-type{text-align:right;font-size:10px;color:#8a948d;text-transform:uppercase;letter-spacing:.12em}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.edu-card{background:#e4e9df;padding:30px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between}.edu-card:nth-child(2){background:#eee2d8}.edu-card small{font:600 10px "Space Grotesk";letter-spacing:.14em;text-transform:uppercase;color:#65716a}.edu-card h3{font:600 25px/1.1 "Space Grotesk";letter-spacing:-.06em;margin:25px 0 7px}.edu-card p{font-size:12px;color:#65716a;margin:0}
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.cap{background:var(--white);border:1px solid var(--line);padding:25px}.cap-no{font:600 10px "Space Grotesk";color:var(--accent)}.cap h3{font:600 18px "Space Grotesk";letter-spacing:-.04em;margin:18px 0 16px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid var(--line);padding:7px 9px;border-radius:2px;font-size:10px;color:#59655d}
+.contact-panel{background:var(--ink);color:#f8f6f0;padding:58px;display:grid;grid-template-columns:1fr auto;gap:35px;align-items:end}.contact-panel .index{color:#ff947a}.contact-panel h2{font:600 clamp(38px,5vw,62px)/1 "Space Grotesk";letter-spacing:-.075em;max-width:650px;margin:15px 0}.contact-panel p{color:#b8c1b9;font-size:13px;line-height:1.8;margin:0;max-width:530px}.contact-panel .btn{background:var(--accent);color:white;white-space:nowrap}.contact-panel .btn:hover{background:#d95436}
+footer{padding:25px 0 35px;display:flex;justify-content:space-between;gap:15px;color:#7a857d;font-size:10px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s,transform .65s}.reveal.visible{opacity:1;transform:none}
+body.dark{--paper:#141a17;--white:#1c2520;--ink:#f1f1e9;--muted:#a8b2aa;--line:#344139;--accent:#ff8060;--accent2:#26372d;color:var(--ink)}body.dark .topbar{background:#141a17ed}body.dark .hero-copy,body.dark .about-text{color:#b7c1b9}body.dark .about-text strong{color:var(--ink)}body.dark .info-row span:first-child,body.dark .work-body p,body.dark .exp-item p{color:#a8b2aa}body.dark .btn-line{color:var(--ink);border-color:#536158}body.dark .contact-panel{background:#0d110f}body.dark .trustline{color:#9ba79e}body.dark .profile-art{background:#2c4236}
+@media(max-width:850px){.container{width:min(var(--max),calc(100% - 36px))}.navlinks{gap:17px}.hero{gap:25px;min-height:auto;padding:65px 0}.hero-visual{min-height:340px}.profile-art{width:330px}.about-grid{gap:35px}.exp-item{grid-template-columns:135px 1fr}.exp-type{display:none}.section{padding:75px 0}}
+@media(max-width:650px){.topbar{height:68px}.navlinks{display:none;position:absolute;top:67px;left:0;right:0;padding:22px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.nav-cta{display:none}.hero{grid-template-columns:1fr;padding:58px 0 45px}.hero-visual{min-height:320px}.profile-art{width:290px}.hero-meta{right:8px}.trustline{justify-content:flex-start}.trustline span{width:44%}.section{padding:68px 0}.section-top{display:block;margin-bottom:30px}.section-intro{margin-top:17px}.about-grid,.work-grid,.edu-grid{grid-template-columns:1fr}.about-text{font-size:16px}.work-art{height:225px}.exp-item{grid-template-columns:1fr;gap:9px;padding:22px 0}.exp-date{padding:0}.cap-grid{grid-template-columns:1fr}.contact-panel{grid-template-columns:1fr;padding:34px 25px}.contact-panel .btn{width:max-content}footer{flex-direction:column}.theme{padding:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+</style>
 </head>
 <body>
-  <header class="wrap nav">
-    <a class="brand" href="#top">AK<span>.</span></a>
-    <nav class="navlinks" id="navlinks">
-      <a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
-    </nav>
-    <button class="menu" id="menu" aria-label="Toggle navigation">Menu</button>
-  </header>
-  <main id="top" class="wrap">
-    <section class="hero">
-      <div>
-        <div class="eyebrow">Portfolio / 2026</div>
-        <h1>Atharva<br>Raju <em>Kale.</em></h1>
-        <p class="intro">Sales &amp; Marketing Professional with a foundation in Automobile Engineering. I bring together customer relationships, event execution and a curiosity for how things work.</p>
-        <div class="actions">
-          <a class="btn primary" href="#contact">Let's connect <span>↗</span></a>
-          <button class="btn secondary" onclick="window.print()">Print portfolio / Save PDF</button>
-        </div>
-      </div>
-      <aside class="hero-card">
-        <div class="eyebrow">A little about me</div>
-        <div class="initials">AK<span style="color:#f3f2ec">.</span></div>
-        <div class="card-foot"><span>Amravati · Maharashtra</span><span>India</span></div>
-      </aside>
-    </section>
-    <section class="section" id="about">
-      <div class="section-head"><div><div class="section-index">01 / INTRODUCTION</div><h2>People, projects<br>&amp; possibilities.</h2></div><p class="section-note">A cross-functional profile shaped by customer-facing work, event environments and technical education.</p></div>
-      <div class="about-grid">
-        <p class="about-copy">I'm <strong>Atharva Raju Kale</strong>, a sales and marketing professional and Automobile Engineering diploma student based in Maharashtra. My experience spans sales, customer communication, marketing coordination and event promotion. I enjoy understanding what people need, communicating clearly and helping turn plans into action.</p>
-        <div class="stat-grid">
-          <div class="stat"><b>3</b><span>Work experiences</span></div>
-          <div class="stat"><b>2024–26</b><span>Professional experience</span></div>
-          <div class="stat"><b>Automobile</b><span>Engineering background</span></div>
-          <div class="stat"><b>Sales + Events</b><span>Core experience areas</span></div>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="experience">
-      <div class="section-head"><div><div class="section-index">02 / CAREER</div><h2>Where I've<br>made an impact.</h2></div><p class="section-note">A snapshot of my professional journey and the roles I've held.</p></div>
-      <div class="timeline">
-        <article class="job"><div class="date">JUN 2025 — JAN 2026</div><div><h3>Sales Representative</h3><div class="company">Hanoz Billimoria Group Global Ventures Pvt. Ltd.</div><p>Worked in a customer-facing sales role, supporting prospect communication, customer relationships and sales activity.</p></div></article>
-        <article class="job"><div class="date">APR 2024 — JUN 2025</div><div><h3>Sales &amp; Marketing Manager</h3><div class="company">Eventfox and Entertainments</div><p>Supported sales and marketing initiatives across event promotion, client communication, partnerships and customer acquisition.</p></div></article>
-        <article class="job"><div class="date">JAN 2024 — APR 2024</div><div><h3>Sales &amp; Marketing Intern</h3><div class="company">Greeco Veggies Kitchen</div><p>Built early experience in sales and marketing through customer interaction, promotional support and relationship building.</p></div></article>
-      </div>
-    </section>
-    <section class="section" id="education">
-      <div class="section-head"><div><div class="section-index">03 / EDUCATION</div><h2>Learning with<br>a technical lens.</h2></div><p class="section-note">Combining practical business experience with an engineering education.</p></div>
-      <div class="edu">
-        <article class="edu-card"><div class="eyebrow">Diploma</div><h3>Automobile Engineering</h3><p>Government Polytechnic, Nagpur · Maharashtra<br>Third-year diploma student</p></article>
-        <article class="edu-card"><div class="eyebrow">Technical interests</div><h3>Mobility &amp; emerging tech</h3><p>Automotive diagnostics, electric vehicle technology, vehicle dynamics and CAD for automotive applications.</p></article>
-      </div>
-    </section>
-    <section class="section" id="skills">
-      <div class="section-head"><div><div class="section-index">04 / CAPABILITIES</div><h2>What I bring<br>to the table.</h2></div><p class="section-note">A mix of commercial, communication, coordination and technical interests.</p></div>
-      <div class="skill-grid">
-        <div class="skill"><h3>Sales &amp; Business</h3><div class="tags"><span class="tag">Sales communication</span><span class="tag">Customer relations</span><span class="tag">Lead engagement</span><span class="tag">Client coordination</span></div></div>
-        <div class="skill"><h3>Marketing &amp; Events</h3><div class="tags"><span class="tag">Event promotion</span><span class="tag">Campaign support</span><span class="tag">Partnerships</span><span class="tag">Audience engagement</span></div></div>
-        <div class="skill"><h3>Automobile &amp; Technology</h3><div class="tags"><span class="tag">Automobile fundamentals</span><span class="tag">EV technology</span><span class="tag">Vehicle dynamics</span><span class="tag">Automotive CAD</span><span class="tag">Industry 4.0</span></div></div>
-      </div>
-    </section>
-    <section class="section" id="projects">
-      <div class="section-head"><div><div class="section-index">05 / SELECTED WORK</div><h2>Projects &amp;<br>interests.</h2></div><p class="section-note">A selection of initiatives and areas that reflect my interests beyond formal job roles.</p></div>
-      <div class="project-grid">
-        <article class="project"><div><div class="num">PROJECT 01 / EVENT DIGITAL</div><h3>Jyeshtha Gauri Pujan 2026</h3><p>Created a dedicated event website concept for a family cultural celebration in Amravati, bringing event information and schedule details into one place.</p></div><a href="https://augadfamily.github.io/gauri-pujan-2k26/" target="_blank" rel="noreferrer">View event website ↗</a></article>
-        <article class="project"><div><div class="num">INTEREST 02 / AUTOMOTIVE</div><h3>Automotive diagnostics</h3><p>Developing knowledge around vehicle diagnostics, scan tools, ECU systems and the evolving automotive technology landscape.</p></div><span class="tag" style="width:max-content">Learning focus</span></article>
-      </div>
-    </section>
-    <section class="section" id="contact">
-      <div class="contact">
-        <div class="eyebrow">06 / GET IN TOUCH</div>
-        <h2>Have an opportunity or a good idea? Let's talk.</h2>
-        <div class="contact-row">
-          <div><p>Open to conversations around sales, marketing, event coordination and automotive opportunities.</p><p>Contact details will be added once confirmed.</p></div>
-          <div class="actions"><a class="btn primary" style="background:#151810;color:#c8f169" href="https://github.com/akale2715-admin" target="_blank" rel="noreferrer">GitHub ↗</a></div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="wrap"><span>© <span id="year">2026</span> Atharva Raju Kale</span><span>Built with intent. Based in Maharashtra, India.</span></footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const menu = document.getElementById('menu');
-    const nav = document.getElementById('navlinks');
-    menu.addEventListener('click', () => nav.classList.toggle('open'));
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
-  </script>
+<header class="topbar">
+ <div class="container" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+  <a class="wordmark" href="#home">ATHARVA KALE<span>.</span></a>
+  <nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
+  <div class="navright"><button class="theme" id="theme" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button><a class="nav-cta" href="#contact">LET'S TALK ↗</a><button class="menu" id="menu" aria-label="Open navigation">☰</button></div>
+ </div>
+</header>
+<main>
+<section class="container hero" id="home">
+ <div>
+  <div class="kicker"><span class="dot"></span> Available for opportunities · Maharashtra, India</div>
+  <h1>Hey, I'm<br><span class="accent">Atharva Kale.</span></h1>
+  <p class="hero-copy">I work at the intersection of <strong>sales, marketing and experiences</strong> — bringing people, ideas and opportunities together. Also an Automobile Engineering student with a curiosity for technology and mobility.</p>
+  <div class="hero-actions"><a class="btn btn-dark" href="#work">Explore my work <span>↗</span></a><a class="btn btn-line" href="#about">More about me <span>↓</span></a></div>
+ </div>
+ <div class="hero-visual">
+  <div class="profile-art"><div class="monogram">AK</div><div class="art-label">Sales · Marketing · Mobility</div></div>
+  <div class="sticker">GOOD IDEAS<br>MOVE PEOPLE ↗</div><div class="hero-meta">PERSONAL PORTFOLIO — 2026</div>
+ </div>
+</section>
+<div class="container trustline"><span>01 — Customer relationships</span><span>02 — Marketing & events</span><span>03 — Automotive engineering</span><span>04 — Always learning</span></div>
+<section class="container section reveal" id="about">
+ <div class="section-top"><div><div class="index">01 / A LITTLE INTRO</div><h2>More than a job title.</h2></div><p class="section-intro">A practical, people-first approach shaped by professional experience and a technical education.</p></div>
+ <div class="about-grid">
+  <p class="about-text">I'm <strong>Atharva Raju Kale</strong>, a sales and marketing professional from Maharashtra, currently pursuing a Diploma in Automobile Engineering. I've worked across <span class="highlight">sales, client communication, marketing coordination and event promotion</span>. I like understanding people, finding the right way to communicate an idea and making things happen with a team.</p>
+  <div class="info-card"><div class="info-row"><span>Based in</span><strong>Amravati, Maharashtra</strong></div><div class="info-row"><span>Current focus</span><strong>Sales & Marketing</strong></div><div class="info-row"><span>Also interested in</span><strong>Automotive technology</strong></div><div class="info-row"><span>Education</span><strong>Diploma · Automobile Engg.</strong></div></div>
+ </div>
+</section>
+<section class="container section reveal" id="work">
+ <div class="section-top"><div><div class="index">02 / SELECTED WORK</div><h2>A few things I've<br>been part of.</h2></div><p class="section-intro">A mix of event work, digital projects and technical interests. Each project is a window into what I enjoy doing.</p></div>
+ <div class="work-grid">
+  <article class="work-card"><div class="work-art art-event"><div class="poster-flower"></div><div class="event-poster"><small>AUGAD PARIVAAR PRESENTS</small><b>ज्येष्ठ<br>गौरीपूजन</b><span>AMRAVATI · 2026</span></div></div><div class="work-body"><div class="work-meta">DIGITAL PROJECT · 2026</div><h3>Jyeshtha Gauri Pujan</h3><p>A dedicated event website for a family cultural celebration, bringing the schedule, event details and updates together in one place.</p><a class="work-link" href="https://augadfamily.github.io/gauri-pujan-2k26/" target="_blank" rel="noreferrer">VISIT PROJECT ↗</a></div></article>
+  <article class="work-card"><div class="work-art art-sales"><div class="sales-board"><small>SALES & MARKETING</small><strong>People first.<br>Always.</strong><div></div></div></div><div class="work-body"><div class="work-meta">PROFESSIONAL EXPERIENCE · 2024—2026</div><h3>Sales & marketing</h3><p>Customer-facing sales, lead engagement, client coordination and promotional support across business and event environments.</p><a class="work-link" href="#experience">EXPLORE EXPERIENCE ↗</a></div></article>
+  <article class="work-card"><div class="work-art art-auto"><div class="auto-board"><div class="gauge"></div><small class="mono" style="color:#58675d">AUTOMOTIVE SYSTEMS</small><div style="font:600 19px 'Space Grotesk';margin-top:15px">Diagnose. Understand.<br>Improve.</div></div></div><div class="work-body"><div class="work-meta">LEARNING INTEREST</div><h3>Automotive diagnostics</h3><p>Exploring vehicle diagnostics, scan tools, ECU systems and the technology shaping modern vehicles.</p><span class="work-link">CURRENT LEARNING FOCUS</span></div></article>
+  <article class="work-card"><div class="work-art art-eventfox"><div class="event-layout"><span></span><span></span><span></span><span></span></div></div><div class="work-body"><div class="work-meta">EVENTS · MARKETING · COORDINATION</div><h3>Event experiences</h3><p>Experience supporting event promotion, audience engagement, client communication and coordination with teams.</p><a class="work-link" href="#experience">VIEW MY JOURNEY ↗</a></div></article>
+ </div>
+</section>
+<section class="container section reveal" id="experience">
+ <div class="section-top"><div><div class="index">03 / EXPERIENCE</div><h2>Where I've worked.</h2></div><p class="section-intro">Roles that helped me build confidence in communication, customer relationships and execution.</p></div>
+ <div class="exp-list">
+  <article class="exp-item"><div class="exp-date">JUN 2025 — JAN 2026</div><div><h3>Sales Representative</h3><div class="exp-company">Hanoz Billimoria Group Global Ventures Pvt. Ltd.</div><p>Customer-facing sales experience, supporting prospect communication, relationship building and day-to-day sales activity.</p></div><div class="exp-type">Sales</div></article>
+  <article class="exp-item"><div class="exp-date">APR 2024 — JUN 2025</div><div><h3>Sales & Marketing Manager</h3><div class="exp-company">Eventfox and Entertainments</div><p>Supported marketing and sales initiatives across event promotion, client communication, partnerships and audience engagement.</p></div><div class="exp-type">Events / Marketing</div></article>
+  <article class="exp-item"><div class="exp-date">JAN 2024 — APR 2024</div><div><h3>Sales & Marketing Intern</h3><div class="exp-company">Greeco Veggies Kitchen</div><p>Built foundational experience through customer interaction, promotional support and relationship building.</p></div><div class="exp-type">Internship</div></article>
+ </div>
+</section>
+<section class="container section reveal" id="education">
+ <div class="section-top"><div><div class="index">04 / EDUCATION</div><h2>Learning by doing.</h2></div><p class="section-intro">A technical foundation that complements my interest in business, people and emerging technology.</p></div>
+ <div class="edu-grid"><article class="edu-card"><small>FORMAL EDUCATION</small><div><h3>Diploma in<br>Automobile Engineering</h3><p>Government Polytechnic, Nagpur · Maharashtra<br>Third-year diploma student</p></div></article><article class="edu-card"><small>AREAS OF INTEREST</small><div><h3>Mobility &<br>new technology</h3><p>EV technology · Vehicle dynamics · Automotive CAD · Industry 4.0 · Vehicle diagnostics</p></div></article></div>
+</section>
+<section class="container section reveal" id="skills">
+ <div class="section-top"><div><div class="index">05 / WHAT I BRING</div><h2>Skills & capabilities.</h2></div><p class="section-intro">A combination of commercial, communication, coordination and technical capabilities.</p></div>
+ <div class="cap-grid">
+  <article class="cap"><div class="cap-no">01</div><h3>Sales & business</h3><div class="chips"><span class="chip">Sales communication</span><span class="chip">Customer relations</span><span class="chip">Lead engagement</span><span class="chip">Client coordination</span></div></article>
+  <article class="cap"><div class="cap-no">02</div><h3>Marketing & events</h3><div class="chips"><span class="chip">Event promotion</span><span class="chip">Campaign support</span><span class="chip">Partnerships</span><span class="chip">Audience engagement</span></div></article>
+  <article class="cap"><div class="cap-no">03</div><h3>Automotive & technology</h3><div class="chips"><span class="chip">Automobile fundamentals</span><span class="chip">EV technology</span><span class="chip">Vehicle dynamics</span><span class="chip">Automotive CAD</span><span class="chip">Industry 4.0</span></div></article>
+ </div>
+</section>
+<section class="container section reveal" id="contact" style="border:0;padding-bottom:55px">
+ <div class="contact-panel"><div><div class="index">06 / CONTACT</div><h2>Let's make something happen.</h2><p>Interested in sales, marketing, event coordination or automotive opportunities? I'd be glad to connect and explore how we can work together.</p></div><a class="btn" href="https://github.com/akale2715-admin" target="_blank" rel="noreferrer">Find me on GitHub ↗</a></div>
+</section>
+</main>
+<footer class="container"><span>© <span id="year"></span> Atharva Raju Kale</span><span>Designed to tell my story, not just list my roles.</span></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const menu=document.getElementById('menu'),nav=document.getElementById('navlinks');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('theme').addEventListener('click',()=>document.body.classList.toggle('dark'));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
 </body>
 </html>
