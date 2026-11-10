@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10110f" />
+  <meta name="description" content="Portfolio of Atharva Raju Kale — Sales & Marketing, Event Management and Automobile Engineering." />
+  <title>Atharva Raju Kale — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#10110f;--panel:#171916;--panel2:#1d201b;--text:#f3f2ec;--muted:#a4a79c;--line:#30342c;--accent:#c8f169;--accent2:#d9ff87;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-weight:800;letter-spacing:-.06em;font-size:20px}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:27px;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .navlinks a:hover,.textlink:hover{color:var(--accent)}
+    .menu{display:none;background:none;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+    .hero{padding:100px 0 92px;display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:center}
+    .eyebrow,.mono{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--accent)}
+    h1{font-size:clamp(48px,7.3vw,92px);line-height:.99;letter-spacing:-.085em;margin:22px 0 24px;font-weight:800}
+    h1 em{font-style:normal;color:var(--accent)}
+    .intro{font-size:17px;color:#c3c6bb;max-width:620px;line-height:1.8}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:34px}
+    .btn{padding:13px 19px;border-radius:4px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px;transition:.2s}
+    .primary{background:var(--accent);color:#141610}.primary:hover{background:var(--accent2);transform:translateY(-2px)}
+    .secondary{border:1px solid #53584c;color:var(--text)}.secondary:hover{border-color:var(--accent);color:var(--accent)}
+    .hero-card{background:var(--panel);border:1px solid var(--line);padding:25px;position:relative;min-height:310px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+    .hero-card:after{content:"";position:absolute;width:210px;height:210px;border:1px solid #4d5c35;border-radius:50%;right:-70px;top:-65px;box-shadow:0 0 0 25px #c8f16908,0 0 0 55px #c8f16905}
+    .initials{font-size:100px;line-height:1;font-weight:800;letter-spacing:-.1em;color:var(--accent);position:relative;z-index:1}
+    .card-foot{border-top:1px solid var(--line);padding-top:17px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:10px}
+    .section{padding:82px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
+    .section-index{font-family:"DM Mono",monospace;color:var(--accent);font-size:11px}
+    h2{font-size:clamp(32px,4.2vw,52px);line-height:1.05;letter-spacing:-.07em;margin:10px 0 0}
+    .section-note{color:var(--muted);max-width:360px;font-size:13px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+    .about-copy{font-size:18px;color:#d1d3ca;line-height:1.85}.about-copy strong{color:var(--accent);font-weight:700}
+    .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .stat{padding:20px;background:var(--panel);border:1px solid var(--line)}.stat b{display:block;font-size:25px;letter-spacing:-.06em}.stat span{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+    .timeline{display:grid;gap:12px}.job{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:27px;background:var(--panel);border:1px solid var(--line)}
+    .date{font-family:"DM Mono",monospace;font-size:11px;color:var(--accent);padding-top:5px}
+    .job h3{font-size:20px;letter-spacing:-.04em;margin:0 0 5px}.company{font-size:13px;color:var(--muted);margin-bottom:13px}
+    .job p{margin:0;color:#c2c5bb;font-size:13px;max-width:720px}
+    .edu{display:grid;grid-template-columns:1fr 1fr;gap:14px}.edu-card{padding:26px;background:var(--panel);border:1px solid var(--line);min-height:185px}
+    .edu-card h3{font-size:21px;letter-spacing:-.05em;margin:20px 0 7px}.edu-card p{color:var(--muted);font-size:13px;margin:0}
+    .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+    .skill{padding:22px;background:var(--panel);border:1px solid var(--line)}.skill h3{margin:0 0 14px;font-size:15px}.tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:11px;color:#d2d5ca;border:1px solid #3a4034;padding:6px 9px;border-radius:3px}
+    .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .project{padding:26px;background:var(--panel);border:1px solid var(--line);min-height:220px;display:flex;flex-direction:column;justify-content:space-between}
+    .project .num{font-family:"DM Mono",monospace;color:var(--accent);font-size:11px}.project h3{font-size:22px;letter-spacing:-.05em;margin:18px 0 8px}.project p{font-size:13px;color:var(--muted);margin:0}
+    .project a{color:var(--accent);font-size:12px;font-weight:800;margin-top:20px;display:inline-block}
+    .contact{background:var(--accent);color:#151810;padding:60px;margin-top:10px}
+    .contact .eyebrow{color:#3e5120}.contact h2{max-width:650px}.contact-row{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:30px}
+    .contact p{font-size:14px;color:#3c4828}.contact a{font-weight:800;border-bottom:1px solid #697d3c;padding-bottom:3px}
+    footer{padding:27px 0;color:var(--muted);font-size:11px;display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:760px){.wrap{width:min(100% - 32px,var(--max))}.navlinks{display:none;position:absolute;top:77px;left:0;right:0;background:var(--panel);padding:22px 24px;flex-direction:column;z-index:5;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.hero{padding:65px 0;grid-template-columns:1fr;gap:30px}.hero-card{min-height:230px}.initials{font-size:75px}.section{padding:60px 0}.section-head{display:block}.section-note{margin-top:15px}.about-grid,.edu,.project-grid{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:10px}.skill-grid{grid-template-columns:1fr}.contact{padding:32px 24px}.contact-row{display:block}.contact-row .btn{margin-top:15px}footer{flex-direction:column}}
+    @media print{.nav,.actions,.menu{display:none!important}body{background:white;color:#111}.hero,.section{padding:30px 0}.hero-card,.job,.edu-card,.skill,.project,.stat{background:white;border:1px solid #ddd;color:#111}.intro,.about-copy,.job p,.company,.edu-card p,.project p{color:#333}.contact{background:#eee;color:#111}.contact p{color:#333}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#top">AK<span>.</span></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu" id="menu" aria-label="Toggle navigation">Menu</button>
+  </header>
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Portfolio / 2026</div>
+        <h1>Atharva<br>Raju <em>Kale.</em></h1>
+        <p class="intro">Sales &amp; Marketing Professional with a foundation in Automobile Engineering. I bring together customer relationships, event execution and a curiosity for how things work.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Let's connect <span>↗</span></a>
+          <button class="btn secondary" onclick="window.print()">Print portfolio / Save PDF</button>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <div class="eyebrow">A little about me</div>
+        <div class="initials">AK<span style="color:#f3f2ec">.</span></div>
+        <div class="card-foot"><span>Amravati · Maharashtra</span><span>India</span></div>
+      </aside>
+    </section>
+    <section class="section" id="about">
+      <div class="section-head"><div><div class="section-index">01 / INTRODUCTION</div><h2>People, projects<br>&amp; possibilities.</h2></div><p class="section-note">A cross-functional profile shaped by customer-facing work, event environments and technical education.</p></div>
+      <div class="about-grid">
+        <p class="about-copy">I'm <strong>Atharva Raju Kale</strong>, a sales and marketing professional and Automobile Engineering diploma student based in Maharashtra. My experience spans sales, customer communication, marketing coordination and event promotion. I enjoy understanding what people need, communicating clearly and helping turn plans into action.</p>
+        <div class="stat-grid">
+          <div class="stat"><b>3</b><span>Work experiences</span></div>
+          <div class="stat"><b>2024–26</b><span>Professional experience</span></div>
+          <div class="stat"><b>Automobile</b><span>Engineering background</span></div>
+          <div class="stat"><b>Sales + Events</b><span>Core experience areas</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="experience">
+      <div class="section-head"><div><div class="section-index">02 / CAREER</div><h2>Where I've<br>made an impact.</h2></div><p class="section-note">A snapshot of my professional journey and the roles I've held.</p></div>
+      <div class="timeline">
+        <article class="job"><div class="date">JUN 2025 — JAN 2026</div><div><h3>Sales Representative</h3><div class="company">Hanoz Billimoria Group Global Ventures Pvt. Ltd.</div><p>Worked in a customer-facing sales role, supporting prospect communication, customer relationships and sales activity.</p></div></article>
+        <article class="job"><div class="date">APR 2024 — JUN 2025</div><div><h3>Sales &amp; Marketing Manager</h3><div class="company">Eventfox and Entertainments</div><p>Supported sales and marketing initiatives across event promotion, client communication, partnerships and customer acquisition.</p></div></article>
+        <article class="job"><div class="date">JAN 2024 — APR 2024</div><div><h3>Sales &amp; Marketing Intern</h3><div class="company">Greeco Veggies Kitchen</div><p>Built early experience in sales and marketing through customer interaction, promotional support and relationship building.</p></div></article>
+      </div>
+    </section>
+    <section class="section" id="education">
+      <div class="section-head"><div><div class="section-index">03 / EDUCATION</div><h2>Learning with<br>a technical lens.</h2></div><p class="section-note">Combining practical business experience with an engineering education.</p></div>
+      <div class="edu">
+        <article class="edu-card"><div class="eyebrow">Diploma</div><h3>Automobile Engineering</h3><p>Government Polytechnic, Nagpur · Maharashtra<br>Third-year diploma student</p></article>
+        <article class="edu-card"><div class="eyebrow">Technical interests</div><h3>Mobility &amp; emerging tech</h3><p>Automotive diagnostics, electric vehicle technology, vehicle dynamics and CAD for automotive applications.</p></article>
+      </div>
+    </section>
+    <section class="section" id="skills">
+      <div class="section-head"><div><div class="section-index">04 / CAPABILITIES</div><h2>What I bring<br>to the table.</h2></div><p class="section-note">A mix of commercial, communication, coordination and technical interests.</p></div>
+      <div class="skill-grid">
+        <div class="skill"><h3>Sales &amp; Business</h3><div class="tags"><span class="tag">Sales communication</span><span class="tag">Customer relations</span><span class="tag">Lead engagement</span><span class="tag">Client coordination</span></div></div>
+        <div class="skill"><h3>Marketing &amp; Events</h3><div class="tags"><span class="tag">Event promotion</span><span class="tag">Campaign support</span><span class="tag">Partnerships</span><span class="tag">Audience engagement</span></div></div>
+        <div class="skill"><h3>Automobile &amp; Technology</h3><div class="tags"><span class="tag">Automobile fundamentals</span><span class="tag">EV technology</span><span class="tag">Vehicle dynamics</span><span class="tag">Automotive CAD</span><span class="tag">Industry 4.0</span></div></div>
+      </div>
+    </section>
+    <section class="section" id="projects">
+      <div class="section-head"><div><div class="section-index">05 / SELECTED WORK</div><h2>Projects &amp;<br>interests.</h2></div><p class="section-note">A selection of initiatives and areas that reflect my interests beyond formal job roles.</p></div>
+      <div class="project-grid">
+        <article class="project"><div><div class="num">PROJECT 01 / EVENT DIGITAL</div><h3>Jyeshtha Gauri Pujan 2026</h3><p>Created a dedicated event website concept for a family cultural celebration in Amravati, bringing event information and schedule details into one place.</p></div><a href="https://augadfamily.github.io/gauri-pujan-2k26/" target="_blank" rel="noreferrer">View event website ↗</a></article>
+        <article class="project"><div><div class="num">INTEREST 02 / AUTOMOTIVE</div><h3>Automotive diagnostics</h3><p>Developing knowledge around vehicle diagnostics, scan tools, ECU systems and the evolving automotive technology landscape.</p></div><span class="tag" style="width:max-content">Learning focus</span></article>
+      </div>
+    </section>
+    <section class="section" id="contact">
+      <div class="contact">
+        <div class="eyebrow">06 / GET IN TOUCH</div>
+        <h2>Have an opportunity or a good idea? Let's talk.</h2>
+        <div class="contact-row">
+          <div><p>Open to conversations around sales, marketing, event coordination and automotive opportunities.</p><p>Contact details will be added once confirmed.</p></div>
+          <div class="actions"><a class="btn primary" style="background:#151810;color:#c8f169" href="https://github.com/akale2715-admin" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap"><span>© <span id="year">2026</span> Atharva Raju Kale</span><span>Built with intent. Based in Maharashtra, India.</span></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menu = document.getElementById('menu');
+    const nav = document.getElementById('navlinks');
+    menu.addEventListener('click', () => nav.classList.toggle('open'));
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+  </script>
+</body>
+</html>
